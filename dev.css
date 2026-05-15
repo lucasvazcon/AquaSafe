@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: url('IMGfundo/Desenvolvedores.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial;
+    color:white;
+    min-height:100vh;
+    position: relative;
+}
+
+/* CAMADA ESCURA NO FUNDO */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.10);
+    z-index:-1;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+}
+
+/* TITULO */
+
+h1{
+    text-align:center;
+    margin-bottom:40px;
+    color:#00c6ff;
+}
+
+/* CARDS */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+/* CARD */
+
+.card{
+    width:300px;
+    background: rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+/* FOTO */
+
+.card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+    border:3px solid #00c6ff;
+}
+
+/* NOME */
+
+.card h2{
+    margin-bottom:10px;
+}
+
+/* TEXTO */
+
+.card p{
+    color:#ccc;
+    margin-bottom:15px;
+}
+
+/* LINK */
+
+.card a{
+    display:inline-block;
+    padding:10px 20px;
+    background:#00c6ff;
+    color:white;
+    border-radius:20px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.card a:hover{
+    background:#0072ff;
+}
+
+/* BOTÃO VOLTAR */
+
+.voltar{
+    display:block;
+    width:200px;
+    margin:40px auto;
+    text-align:center;
+    padding:12px;
+    background:#0072ff;
+    border-radius:20px;
+    color:white;
+    text-decoration:none;
+}

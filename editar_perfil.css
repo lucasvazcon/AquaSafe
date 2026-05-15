@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: url('IMGfundo/EditarPerfil.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    font-family: Arial;
+    color: white;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    position: relative;
+    padding: 20px;
+}
+
+/* CAMADA ESCURA */
+body::before{
+    content:"";
+    position: fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background: rgba(0,0,0,0.5);
+
+    z-index:-1;
+}
+
+/* CAIXA CENTRAL */
+.caixa{
+    max-width: 600px;
+    min-width: 300px;
+
+    border-radius: 20px;
+
+    background-color: rgba(255, 255, 255, 0.05);
+
+    padding: 25px;
+
+    margin: 40px auto;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* TITULO */
+h2{
+    text-align: center;
+    color: #00c6ff;
+    margin-bottom: 15px;
+}
+
+/* FORM */
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL */
+label{
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* INPUT */
+form input{
+    padding: 12px;
+
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    border-radius: 20px;
+    border: none;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: white;
+
+    outline: none;
+}
+
+/* INPUT FOCUS */
+form input:focus{
+    border: 1px solid #00c6ff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* BOTÃO PRINCIPAL */
+form button{
+    padding: 12px;
+
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+
+    border: none;
+    border-radius: 20px;
+
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+    transition: 0.3s;
+}
+
+form button:hover{
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* BOTÃO EXCLUIR */
+.btn-delete{
+    background: #e74c3c;
+    margin-top: 15px;
+}
+
+.btn-delete:hover{
+    background: #c0392b;
+}
+
+/* RADIO */
+.radio-group{
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* MENSAGENS */
+
+.mensagem{
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.erro{
+    background: rgba(231, 76, 60, 0.2);
+    border: 1px solid #e74c3c;
+    color: #ffb3aa;
+}
+
+.sucesso{
+    background: rgba(46, 204, 113, 0.2);
+    border: 1px solid #2ecc71;
+    color: #b9ffd3;
+}

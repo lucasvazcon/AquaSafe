@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: url('IMGfundo/Cadastro.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    color: white;
+}
+
+/* BOX FORMULÁRIO */
+.box{
+    width: 100%;
+    max-width: 420px;
+
+    background-color: rgba(52, 77, 97, 0.90);
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+
+    backdrop-filter: blur(6px);
+}
+
+/* FIELDSET */
+fieldset{
+    border: 2px solid #8fb3c9;
+
+    border-radius: 12px;
+
+    padding: 18px;
+}
+
+/* LEGEND */
+legend{
+    border: 1px solid #8fb3c9;
+
+    padding: 8px 15px;
+
+    text-align: center;
+
+    background-color: #8fb3c9;
+
+    border-radius: 8px;
+
+    color: #1d2d3a;
+
+    font-weight: bold;
+
+    font-size: 15px;
+}
+
+/* INPUT BOX */
+.inputBox{
+    position: relative;
+
+    margin-bottom: 22px;
+}
+
+/* INPUT */
+.inputUser{
+    width: 100%;
+
+    padding: 10px 5px;
+
+    background: transparent;
+
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.7);
+
+    outline: none;
+
+    color: white;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+/* EFEITO INPUT */
+.inputUser:focus{
+    border-bottom: 2px solid #b7d3e5;
+}
+
+/* LABEL */
+.labelInput{
+    position: absolute;
+
+    top: 10px;
+    left: 5px;
+
+    pointer-events: none;
+
+    transition: .3s;
+
+    color: #d8e6ef;
+
+    font-size: 14px;
+}
+
+/* LABEL ANIMADO */
+.inputUser:focus ~ .labelInput,
+.inputUser:not(:placeholder-shown) ~ .labelInput{
+    top: -10px;
+
+    font-size: 11px;
+
+    color: #b7d3e5;
+}
+
+/* AUTOFILL */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0px 1000px rgba(52, 77, 97, 1) inset !important;
+
+    -webkit-text-fill-color: white !important;
+
+    border-bottom: 2px solid white !important;
+}
+
+/* TEXTO SEXO */
+p{
+    margin-bottom: 8px;
+
+    color: #d8e6ef;
+
+    font-size: 14px;
+}
+
+/* RADIO */
+input[type="radio"]{
+    margin-right: 5px;
+    margin-top: 8px;
+}
+
+/* DATA */
+#data_nascimento{
+    width: 100%;
+
+    border: none;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    margin-top: 8px;
+
+    background: #dce7ef;
+
+    color: #1d2d3a;
+}
+
+/* BOTÃO */
+#submit{
+    width: 100%;
+
+    border: none;
+
+    padding: 12px;
+
+    margin-top: 18px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+
+    background-image: linear-gradient(to right, #6f9bb8, #4c6f88);
+
+    transition: 0.3s;
+}
+
+#submit:hover{
+    background-image: linear-gradient(to right, #84abc5, #5d819b);
+
+    transform: scale(1.02);
+}

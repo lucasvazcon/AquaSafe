@@ -1,0 +1,250 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* BODY */
+body{
+    background: url('IMGfundo/siteAquaSafe.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+    min-height: 100vh;
+
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* CAMADA ESCURA */
+body::before{
+    content: "";
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.55);
+
+    z-index: -1;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    padding: 20px 60px;
+
+    background: rgba(0,0,0,0.3);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    color: #00c6ff;
+    font-size: 32px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+header a:hover{
+    color: #00c6ff;
+}
+
+/* CONTAINER */
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* HERO */
+.hero{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.hero h2{
+    font-size: 55px;
+    color: #00c6ff;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    font-size: 20px;
+    color: #d6d6d6;
+    line-height: 1.8;
+}
+
+/* CARDS */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 25px;
+    margin-bottom: 70px;
+}
+
+.card{
+    background: rgba(255,255,255,0.06);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0,198,255,0.3);
+}
+
+.card h3{
+    color: #00c6ff;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card p{
+    color: #d9d9d9;
+    line-height: 1.7;
+}
+
+/* TECNOLOGIAS */
+.tecnologias{
+    margin-bottom: 70px;
+}
+
+.tecnologias h2{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00c6ff;
+    font-size: 40px;
+}
+
+.tech-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tech{
+    background: rgba(255,255,255,0.08);
+    padding: 15px 30px;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.tech:hover{
+    background: #00c6ff;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* OBJETIVO */
+.objetivo{
+    background: rgba(255,255,255,0.05);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    margin-bottom: 60px;
+
+    text-align: center;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.objetivo h2{
+    color: #00c6ff;
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+
+.objetivo p{
+    line-height: 1.9;
+    color: #d7d7d7;
+    font-size: 18px;
+}
+
+/* BOTÕES */
+.botoes{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.botoes a{
+    text-decoration: none;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botoes a:hover{
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 80px;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: rgba(0,0,0,0.3);
+
+    color: #aaa;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+    .hero h2{
+        font-size: 40px;
+    }
+
+    .hero p{
+        font-size: 17px;
+    }
+
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .objetivo{
+        padding: 25px;
+    }
+}
